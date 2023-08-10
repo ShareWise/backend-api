@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    db:
+        image: postgres
+        container_name: sharewise-db
+        restart: always
+        ports:
+            - 3307:3307
+        environment:
+            POSTGRES_DB: sharewise
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+volumes:
+    pgdata:
