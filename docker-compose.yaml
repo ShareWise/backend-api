@@ -7,9 +7,9 @@ services:
         restart: always
 
         environment:
-            POSTGRES_DB: sharewise
-            POSTGRES_USER: root
-            POSTGRES_PASSWORD: root
+            POSTGRES_DB: ${DB_NAME}
+            POSTGRES_USER: ${DB_USERNAME}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
         volumes:
             - pgdata:/var/lib/postgresql/data
         ports:
