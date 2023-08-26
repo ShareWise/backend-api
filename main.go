@@ -1,13 +1,12 @@
 package main
 
 import (
-	routes "backend-api/routes/product"
+	api "backend-api/api/product"
 	"net/http"
 )
 
 func main() {
-	http.HandleFunc("/", routes.Handler)
-	http.HandleFunc("/test", routes.Test)
+	http.HandleFunc("/", api.Handler)
 
 	http.ListenAndServe(":8080", nil)
 }
